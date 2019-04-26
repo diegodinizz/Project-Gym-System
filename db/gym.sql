@@ -6,9 +6,9 @@ CREATE TABLE members (
   id SERIAL8 primary key,
   name VARCHAR(255) not null,
   post_code VARCHAR(255),
-  date_of_birth DATE,
+  date_of_birth VARCHAR(255),
   email VARCHAR(255),
-  mobile_number NUMERIC
+  mobile_number VARCHAR(255)
 );
 
 CREATE TABLE gymclasses (
@@ -16,7 +16,7 @@ CREATE TABLE gymclasses (
   name VARCHAR(255),
   duration VARCHAR(255),
   calories VARCHAR(255),
-  intructor VARCHAR(255)
+  instructor VARCHAR(255)
 );
 
 CREATE TABLE attendences (
