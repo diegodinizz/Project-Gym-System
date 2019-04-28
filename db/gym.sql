@@ -13,7 +13,7 @@ CREATE TABLE members (
 
 CREATE TABLE gymclasses (
   id SERIAL8 primary key,
-  name VARCHAR(255),
+  name VARCHAR(255) not null,
   duration VARCHAR(255),
   calories VARCHAR(255),
   instructor VARCHAR(255)

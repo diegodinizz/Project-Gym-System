@@ -3,9 +3,9 @@ require_relative("../models/member.rb")
 require_relative("../models/gymclass.rb")
 require_relative("../models/attendence.rb")
 
-# Member.delete_all()
-# Gymclass.delete_all()
-# Attedence.delete_all()
+Member.delete_all()
+Gymclass.delete_all()
+Attendence.delete_all()
 
 member1 = Member.new({
   "name" => "Jon Snow",
@@ -102,40 +102,40 @@ gymclass5 = Gymclass.new({
 
 gymclass5.save()
 
-attedence1 = Attendence.new({
+attendence1 = Attendence.new({
   "member_id" => member1.id,
   "gymclass_id" => gymclass4.id
   })
 
-attedence1.save()
+attendence1.save()
 
-attedence2 = Attendence.new({
+attendence2 = Attendence.new({
   "member_id" => member2.id,
   "gymclass_id" => gymclass2.id
   })
 
-attedence2.save()
+attendence2.save()
 
-attedence3 = Attendence.new({
+attendence3 = Attendence.new({
   "member_id" => member3.id,
   "gymclass_id" => gymclass3.id
   })
 
-attedence3.save()
+attendence3.save()
 
-attedence4 = Attendence.new({
+attendence4 = Attendence.new({
   "member_id" => member4.id,
   "gymclass_id" => gymclass5.id
   })
 
-attedence4.save()
+attendence4.save()
 
-attedence5 = Attendence.new({
+attendence5 = Attendence.new({
   "member_id" => member5.id,
   "gymclass_id" => gymclass1.id
   })
 
-attedence5.save()
+attendence5.save()
 
 binding.pry
 nil

@@ -26,5 +26,45 @@ class Attendence
     @id = results['id'].to_i
   end
 
+  def update()
+    sql = "UPDATE attendences
+    SET
+    (
+      member_id,
+      gymclass_id
+    ) =
+    (
+      $1, $2,
+    )
+    WHERE id = $3"
+    values = [@member_id, @gymclass_id, @id]
+    SqlRunner.run(sqlm values)
+  end
 
-end
+  def delete()
+    sql = "DELETE FROM attendences
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
+  def self.all()
+    sql = "SELECT * FROM attendences"
+    results = SqlRunner.run(sql)
+    return results.map { |attendence| Attendence.new(attendence) }
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM attendences
+    WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Attendence.new(results.first)
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM attendences"
+    SqlRunner.run(sql)
+  end
+
+  end
