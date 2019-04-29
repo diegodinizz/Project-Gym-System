@@ -38,3 +38,10 @@ post '/members/:id' do
   Member.new(params).update
   redirect to '/members'
 end
+
+# destroy
+post '/members/:id/delete' do
+  members = Member.find(params[:id])
+  members.delete()
+  redirect to '/members'
+end

@@ -1,0 +1,8 @@
+<h2><%= @gymclass.name %></h2>
+
+<p>Duration: <%= @gymclass.duration %></p>
+<p>Calories: <%= @gymclass.calories %></p>
+<p>Instructor: <%= @gymclass.instructor %></p>
+
+<form action="/classes/<%= @gymclass.id %>/edit" method="GET"><input type="submit" value="Edit"></form>
+<form action="/classes/<%= @gymclass.id %>/delete" method="POST"><input type="submit" value="Delete"></form>

@@ -1,0 +1,6 @@
+<% @gymclasses.each do |gymclass| %>
+<p><%=gymclass.name%></p>
+<p> <a href="/classes/<%= gymclass.id %>">Class details</a> </p>
+<% end %>
+
+<a href="/">Home</a>
