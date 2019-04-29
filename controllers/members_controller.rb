@@ -21,7 +21,7 @@ get '/members/:id' do
 end
 
 # create
-post '/members/sigh-up' do
+post '/members' do
   @members = Member.new(params)
   @members.save()
   erb(:"members/create")

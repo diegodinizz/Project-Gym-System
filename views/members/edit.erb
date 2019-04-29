@@ -1,19 +1,45 @@
-<form action="/members/edit" method="post">
+<form action="/members/<%= @members.id %>" method="post">
 
   <label for="name">Full name:</label>
-  <input type="text" name="name" id="name">
+  <input
+  type="text"
+  name="name"
+  id="name"
+  value="<%= @members.name %>"
+  />
 
   <label for="post-code">Post code:</label>
-  <input type="text" name="post_code" id="post-code">
+  <input
+  type="text"
+  name="post_code"
+  id="post-code"
+  value="<%= @members.post_code %>"
+  />
 
   <label for="date-of-birth">Date of birth:</label>
-  <input type="text" name="date_of_birth" id="date-of-birth">
+  <input
+  type="text"
+  name="date_of_birth"
+  id="date-of-birth"
+  value="<%= @members.date_of_birth %>"
+  />
 
-  <label for="email">Email:</label>
-  <input type="text" name="email" id="email">
+  <label for="email">E-mail:</label>
+  <input
+  type="email"
+  name="email"
+  id="email"
+  value="<%= @members.email %>"
+  />
 
   <label for="mobile-number">Mobile number:</label>
-  <input type="text" name="mobile_number" id="mobile-number">
+  <input
+  type="text"
+  name="mobile_number"
+  id="mobile-number"
+  value="<%= @members.mobile_number %>"
+  />
 
-  <input type="submit" name="" value="Send">
+  <input type='submit' value="Edit">
+
 </form>

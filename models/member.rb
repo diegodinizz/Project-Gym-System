@@ -48,7 +48,7 @@ class Member
     )
     WHERE id = $6"
     values = [@name, @post_code, @date_of_birth, @email, @mobile_number, @id]
-    SqlRunner.run(sqlm values)
+    SqlRunner.run(sql, values)
   end
 
   def delete()
