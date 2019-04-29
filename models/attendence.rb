@@ -48,6 +48,22 @@ class Attendence
     SqlRunner.run(sql, values)
   end
 
+  def member()
+    sql = "SELECT * FROM members
+    WHERE id = $1"
+    values = [@member_id]
+    results = SqlRunner.run(sql, values)
+    return Member.new(results.first)
+  end
+
+  def gymclass()
+    sql = "SELECT * FROM gymclasses
+    WHERE id = $1"
+    values = [@gymclass_id]
+    results = SqlRunner.run(sql, values)
+    return Gymclass.new(results.first)
+  end
+
   def self.all()
     sql = "SELECT * FROM attendences"
     results = SqlRunner.run(sql)

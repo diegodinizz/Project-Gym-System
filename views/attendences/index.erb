@@ -1,0 +1,12 @@
+<h1>Booked classes</h1>
+
+<h2> <a href="/attendences/new">Book a new class</a> </h2>
+
+<% @attendences.each do |attendence| %>
+
+<h3> <%= attendence.gymclass().name %></h3>
+<p><%= attendence.member().name %> </p>
+
+<% end %>
+
+<p> <a href="/">Home</a> </p>

@@ -1,0 +1,22 @@
+<h1>Booking</h1>
+
+<form action="/attendences" method="post">
+
+  <label for="member_select">Select a member</label>
+  <select id="member_select" name="member_id">
+    <% for member in @members %>
+    <option value="<%= member.id %>"><%= member.name %></option>
+    <% end %>
+  </select>
+
+  <label for="class_select">Select a class</label>
+  <select id="class_select" name="gymclass_id">
+    <% for gymclass in @gymclasses %>
+    <option value="<%= gymclass.id %>"><%= gymclass.name %></option>
+    <% end %>
+  </select>
+
+  <input type="submit" name="" value="Book">
+</form>
+
+<p> <a href="/attendences">Back</a> </p>
