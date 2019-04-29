@@ -45,7 +45,7 @@ class Gymclass
       )
       WHERE id = $5"
       values = [@name, @duration, @calories, @instructor, @id]
-      SqlRunner.run(sqlm values)
+      SqlRunner.run(sql, values)
   end
 
   def delete()

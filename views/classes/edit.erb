@@ -1,0 +1,37 @@
+<form action="/classes/<%= @gymclasses.id %>" method="post">
+
+  <label for="name">Name:</label>
+  <input
+  type="text"
+  name="name"
+  id="name"
+  value="<%= @gymclasses.name %>"
+  />
+
+  <label for="duration">Duration:</label>
+  <input
+  type="text"
+  name="duration"
+  id="duration"
+  value="<%= @gymclasses.duration %>"
+  />
+
+  <label for="calories">Calories:</label>
+  <input
+  type="text"
+  name="calories"
+  id="calories"
+  value="<%= @gymclasses.calories %>"
+  />
+
+  <label for="instructor">Instructor:</label>
+  <input
+  type="text"
+  name="instructor"
+  id="instructor"
+  value="<%= @gymclasses.instructor %>"
+  />
+
+  <input type='submit' value="Edit">
+
+</form>

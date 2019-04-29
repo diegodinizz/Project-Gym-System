@@ -60,7 +60,7 @@ member5.save()
 gymclass1 = Gymclass.new({
   "name" => "Cycle",
   "duration" => "30 mins",
-  "calories" => "Estimated to burn 300 kCal",
+  "calories" => "300",
   "instructor" => "Katarzyna Piskorz"
   })
 
@@ -69,7 +69,7 @@ gymclass1.save()
 gymclass2 = Gymclass.new({
   "name" => "Burn it",
   "duration" => "30 mins",
-  "calories" => "Estimated to burn 250 kCal",
+  "calories" => "250",
   "instructor" => "Gareth Carr"
   })
 
@@ -78,7 +78,7 @@ gymclass2.save()
 gymclass3 = Gymclass.new({
   "name" => "Yoga",
   "duration" => "60 mins",
-  "calories" => "Estimated to burn 350 kCal",
+  "calories" => "350",
   "instructor" => "Michele Lindsay"
   })
 
@@ -87,7 +87,7 @@ gymclass3.save()
 gymclass4 = Gymclass.new({
   "name" => "Absolute Abs",
   "duration" => "15 mins",
-  "calories" => "Estimated to burn 38 kCal",
+  "calories" => "38",
   "instructor" => "Struan Nevin"
   })
 
@@ -96,7 +96,7 @@ gymclass4.save()
 gymclass5 = Gymclass.new({
   "name" => "Zumba",
   "duration" => "45 mins",
-  "calories" => "Estimated to burn 262 kCal",
+  "calories" => "262",
   "instructor" => "Jennifer Geary"
   })
 

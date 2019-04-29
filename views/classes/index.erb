@@ -1,6 +1,10 @@
+<h1>Classes</h1>
+
+<h2> <a href="/classes/new">Create new class</a> </h2>
+
 <% @gymclasses.each do |gymclass| %>
-<p><%=gymclass.name%></p>
+<h3><%=gymclass.name%></h3>
 <p> <a href="/classes/<%= gymclass.id %>">Class details</a> </p>
 <% end %>
 
-<a href="/">Home</a>
+<p> <a href="/">Home</a> </p>
