@@ -44,3 +44,10 @@ post '/attendences/:id' do
   Attendence.new(params).update
   redirect to '/attendences'
 end
+
+# destroy
+post '/attendences/:id/delete' do
+  attendences = Attendence.find(params[:id])
+  attendences.delete()
+  redirect to '/attendences'
+end
