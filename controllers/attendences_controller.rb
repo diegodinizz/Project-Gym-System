@@ -18,9 +18,29 @@ get '/attendences/new' do
   erb(:"attendences/new")
 end
 
+# show
+get '/attendences/:id' do
+  @attendence = Attendence.find(params[:id])
+  erb(:"attendences/show")
+end
+
 # create
 post '/attendences' do
   @attendences = Attendence.new(params)
   @attendences.save()
   erb(:"attendences/create")
+end
+
+# edit
+get '/attendences/:id/edit' do
+  @attendences = Attendence.find(params[:id])
+  @gymclasses = Gymclass.all()
+  @members = Member.all()
+  erb(:"attendences/edit")
+end
+
+# update
+post '/attendences/:id' do
+  Attendence.new(params).update
+  redirect to '/attendences'
 end

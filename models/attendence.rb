@@ -34,7 +34,7 @@ class Attendence
       gymclass_id
     ) =
     (
-      $1, $2,
+      $1, $2
     )
     WHERE id = $3"
     values = [@member_id, @gymclass_id, @id]
