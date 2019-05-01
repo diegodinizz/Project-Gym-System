@@ -21,6 +21,6 @@ CREATE TABLE gymclasses (
 
 CREATE TABLE attendences (
   id SERIAL8 primary key,
-  member_id INT8 REFERENCES members(id),
-  gymclass_id INT8 REFERENCES gymclasses(id)
+  member_id INT8 REFERENCES members(id) ON DELETE CASCADE,
+  gymclass_id INT8 REFERENCES gymclasses(id) ON DELETE CASCADE
 );

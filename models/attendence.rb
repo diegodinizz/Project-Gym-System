@@ -1,4 +1,6 @@
 require_relative("../db/sql_runner.rb")
+require_relative("./member.rb")
+require_relative("./gymclass.rb")
 
 class Attendence
 
@@ -64,6 +66,16 @@ class Attendence
     return Gymclass.new(results.first)
   end
 
+  def get_members_in_gymclass()
+    sql = "SELECT * FROM members
+    INNER JOIN attendences
+    ON members.id = attendences.member_id
+    WHERE gymclass_id = $1;"
+    values = [@gymclass_id]
+    results = SqlRunner.run(sql, values)
+    return Member.map_items(results)
+  end
+
   def self.all()
     sql = "SELECT * FROM attendences"
     results = SqlRunner.run(sql)
@@ -81,6 +93,11 @@ class Attendence
   def self.delete_all()
     sql = "DELETE FROM attendences"
     SqlRunner.run(sql)
+  end
+
+  def self.map_items(attendence_data)
+    result = attendence_data.map { |attendence| Attendence.new(attendence) }
+    return result
   end
 
   end

@@ -1,21 +1,22 @@
-<form action="/members" method="post">
+<div class="container">
+  <h1>New member</h1>
+  <form action="/members" method="post">
 
-  <label for="name">Full name:</label>
-  <input type="text" name="name" id="name">
+    <label for="name">Full name:</label>
+    <input type="text" name="name" id="name" placeholder="Your name..">
 
-  <label for="post-code">Post code:</label>
-  <input type="text" name="post_code" id="post-code">
+    <label for="post-code">Post code:</label>
+    <input type="text" name="post_code" id="post-code" placeholder="Your post code..">
 
-  <label for="date-of-birth">Date of birth:</label>
-  <input type="text" name="date_of_birth" id="date-of-birth">
+    <label for="email">E-mail:</label>
+    <input type="text" name="email" id="email" placeholder="Your email..">
 
-  <label for="email">E-mail:</label>
-  <input type="email" name="email" id="email">
+    <label for="mobile-number">Mobile number:</label>
+    <input type="text" name="mobile_number" id="mobile-number" placeholder="Your mobile number..">
 
-  <label for="mobile-number">Mobile number:</label>
-  <input type="text" name="mobile_number" id="mobile-number">
+    <input type="submit" value="Submit">
 
-  <input type="submit" name="" value="Send">
-</form>
+    <p> <a href="/">Back</a> </p>
 
-<p> <a href="/">Back</a> </p>
+  </form>
+</div>

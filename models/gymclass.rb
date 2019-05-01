@@ -55,6 +55,16 @@ class Gymclass
     SqlRunner.run(sql, values)
   end
 
+  # def get_members_in_gymclass()
+  #   sql = "SELECT * FROM members
+  #   INNER JOIN attendences
+  #   ON members.id = attendences.member_id
+  #   WHERE gymclass_id = $1;"
+  #   values = [@id]
+  #   results = SqlRunner.run(sql, values)
+  #   return Member.map_items(results)
+  # end
+
   def self.all()
     sql = "SELECT * FROM gymclasses"
     results = SqlRunner.run(sql)
@@ -72,6 +82,11 @@ class Gymclass
   def self.delete_all()
     sql = "DELETE FROM gymclasses"
     SqlRunner.run(sql)
+  end
+
+  def self.map_items(gymclass_data)
+    result = gymclass_data.map { |gymclass| Gymclass.new(gymclass) }
+    return result
   end
 
   end

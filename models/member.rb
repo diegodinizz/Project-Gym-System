@@ -77,4 +77,9 @@ class Member
     SqlRunner.run(sql)
   end
 
+  def self.map_items(member_data)
+    result = member_data.map { |member| Member.new(member) }
+    return result
+  end
+
   end
