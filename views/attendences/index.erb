@@ -1,13 +1,17 @@
-<h1> <a href="/attendences/new">Book a new class</a> </h1>
+<div class="index_attendences">
 
-<h2>Booked classes</h2>
+  <h2> <a href="/attendences/new">Book a new class</a> </h2>
 
-<% @attendences.each do |attendence| %>
+  <h1>Booked classes</h1>
 
-<h3> <%= attendence.gymclass().name %></h3>
-<p><%= attendence.member().name %> </p>
-<p> <a href="/attendences/<%= attendence.id %>">Show booking</a> </p>
+  <% @attendences.each do |attendence| %>
 
-<% end %>
+  <h2> <%= attendence.gymclass().name %></h2>
+  <p><%= attendence.member().name %> </p>
+  <p> <a href="/attendences/<%= attendence.id %>">Show booking</a> </p>
 
-<p> <a href="/">Home</a> </p>
+  <% end %>
+
+  <p> <a href="/">Home</a> </p>
+
+</div>

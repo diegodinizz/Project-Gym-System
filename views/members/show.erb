@@ -1,11 +1,15 @@
-<h2><%= @member.name %></h2>
+<div class="container">
 
-<p>Post code: <%= @member.post_code %></p>
-<p>Date of birth: <%= @member.date_of_birth %></p>
-<p>E-mail: <%= @member.email %></p>
-<p>Mobile number: <%= @member.mobile_number %></p>
+  <h2><%= @member.name %></h2>
 
-<form action="/members/<%= @member.id %>/edit" method="get"><input type="submit" value="Edit"></form>
-<form action="/members/<%= @member.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+  <p>Post code: <%= @member.post_code %></p>
+  <p>Date of birth: <%= @member.date_of_birth %></p>
+  <p>E-mail: <%= @member.email %></p>
+  <p>Mobile number: <%= @member.mobile_number %></p>
 
-<p> <a href="/members">Back</a> </p>
+  <form action="/members/<%= @member.id %>/edit" method="get"><input type="submit" value="Edit"></form>
+  <form action="/members/<%= @member.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+
+  <p> <a href="/members">Back</a> </p>
+
+</div>

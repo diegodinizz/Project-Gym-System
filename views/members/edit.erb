@@ -1,47 +1,51 @@
-<form action="/members/<%= @members.id %>" method="post">
+<div class="container">
 
-  <label for="name">Full name:</label>
-  <input
-  type="text"
-  name="name"
-  id="name"
-  value="<%= @members.name %>"
-  />
+  <form action="/members/<%= @members.id %>" method="post">
 
-  <label for="post-code">Post code:</label>
-  <input
-  type="text"
-  name="post_code"
-  id="post-code"
-  value="<%= @members.post_code %>"
-  />
+    <label for="name">Full name:</label>
+    <input
+    type="text"
+    name="name"
+    id="name"
+    value="<%= @members.name %>"
+    />
 
-  <label for="date-of-birth">Date of birth:</label>
-  <input
-  type="text"
-  name="date_of_birth"
-  id="date-of-birth"
-  value="<%= @members.date_of_birth %>"
-  />
+    <label for="post-code">Post code:</label>
+    <input
+    type="text"
+    name="post_code"
+    id="post-code"
+    value="<%= @members.post_code %>"
+    />
 
-  <label for="email">E-mail:</label>
-  <input
-  type="email"
-  name="email"
-  id="email"
-  value="<%= @members.email %>"
-  />
+    <label for="date-of-birth">Date of birth:</label>
+    <input
+    type="text"
+    name="date_of_birth"
+    id="date-of-birth"
+    value="<%= @members.date_of_birth %>"
+    />
 
-  <label for="mobile-number">Mobile number:</label>
-  <input
-  type="text"
-  name="mobile_number"
-  id="mobile-number"
-  value="<%= @members.mobile_number %>"
-  />
+    <label for="email">E-mail:</label>
+    <input
+    type="text"
+    name="email"
+    id="email"
+    value="<%= @members.email %>"
+    />
 
-  <input type='submit' value="Edit">
+    <label for="mobile-number">Mobile number:</label>
+    <input
+    type="text"
+    name="mobile_number"
+    id="mobile-number"
+    value="<%= @members.mobile_number %>"
+    />
 
-</form>
+    <input type='submit' value="Edit">
 
-<p> <a href="/members">Back</a> </p>
+  </form>
+
+  <p> <a href="/members">Back</a> </p>
+
+</div>
