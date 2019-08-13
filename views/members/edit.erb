@@ -1,51 +1,41 @@
 <div class="container">
-
+  
+  <h2>Edit member</h2>
+  
   <form action="/members/<%= @members.id %>" method="post">
-
-    <label for="name">Full name:</label>
-    <input
-    type="text"
-    name="name"
-    id="name"
-    value="<%= @members.name %>"
-    />
-
-    <label for="post-code">Post code:</label>
-    <input
-    type="text"
-    name="post_code"
-    id="post-code"
-    value="<%= @members.post_code %>"
-    />
-
-    <label for="date-of-birth">Date of birth:</label>
-    <input
-    type="text"
-    name="date_of_birth"
-    id="date-of-birth"
-    value="<%= @members.date_of_birth %>"
-    />
-
-    <label for="email">E-mail:</label>
-    <input
-    type="text"
-    name="email"
-    id="email"
-    value="<%= @members.email %>"
-    />
-
-    <label for="mobile-number">Mobile number:</label>
-    <input
-    type="text"
-    name="mobile_number"
-    id="mobile-number"
-    value="<%= @members.mobile_number %>"
-    />
-
-    <input type='submit' value="Edit">
-
+    
+    <div class="name">
+      <label for="name">Full name</label>
+      <div>
+        <input type="text" name="name" placeholder="" value="<%= @members.name %>">
+      </div>
+    </div>
+    
+    <div class="post-code">
+      <label for="post-code">Post code</label>
+      <div>
+        <input type="text" name="post_code" placeholder="" value="<%= @members.post_code %>">
+      </div>
+    </div>
+    
+    <div class="email">
+      <label for="email">E-mail</label>
+      <div>
+        <input type="text" name="email" placeholder="" value="<%= @members.email %>">
+      </div>
+    </div>
+    
+    <div class="mobile-number">
+      <label for="mobile-number">Mobile number</label>
+      <div>
+        <input type="text" name="mobile_number" placeholder="" value="<%= @members.mobile_number %>">
+      </div>
+    </div>
+    
+    <input type="submit" value="Submit">
+    
+    <h4> <a href="/members/<%= @members.id %>">Back</a> </h4>
+    
   </form>
-
-  <p> <a href="/members">Back</a> </p>
-
+  
 </div>

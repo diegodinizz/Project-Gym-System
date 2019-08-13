@@ -1,43 +1,42 @@
 <div class="container">
+  
+  <h2>Edit Class</h2>
 
   <form action="/classes/<%= @gymclasses.id %>" method="post">
-
-    <label for="name">Name:</label>
-    <input
-    type="text"
-    name="name"
-    id="name"
-    value="<%= @gymclasses.name %>"
-    />
-
-    <label for="duration">Duration:</label>
-    <input
-    type="text"
-    name="duration"
-    id="duration"
-    value="<%= @gymclasses.duration %>"
-    />
-
-    <label for="calories">Calories:</label>
-    <input
-    type="text"
-    name="calories"
-    id="calories"
-    value="<%= @gymclasses.calories %>"
-    />
-
-    <label for="instructor">Instructor:</label>
-    <input
-    type="text"
-    name="instructor"
-    id="instructor"
-    value="<%= @gymclasses.instructor %>"
-    />
-
-    <input type='submit' value="Edit">
-
+    
+    <div class="name">
+      <label for="name">Name</label>
+      <div>
+        <input type="text" name="name" placeholder="" value="<%= @gymclasses.name %>">
+      </div>
+    </div>
+    
+    <div class="duration">
+      <label for="duration">Duration</label>
+      <div>
+        <input type="text" name="duration" placeholder="" value="<%= @gymclasses.duration %>">
+      </div>
+    </div>
+    
+    <div class="calories">
+      <label for="calories">Calories</label>
+      <div>
+        <input type="text" name="calories" placeholder="" value="<%= @gymclasses.calories %>">
+      </div>
+    </div>
+    
+    <div class="instructor">
+      <label for="instructor">Instructor</label>
+      <div>
+        <input type="text" name="instructor" placeholder="" value="<%= @gymclasses.instructor %>">
+      </div>
+    </div>
+    
+    <input type="submit" value="Submit">
+    
+    <h4> <a href="/classes/<%= @gymclasses.id %>">Back</a> </h4>
+    
   </form>
-
-  <p> <a href="/classes">Back</a> </p>
-
+  
+  
 </div>
