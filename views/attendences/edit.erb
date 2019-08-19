@@ -1,27 +1,32 @@
 <div class="container">
-
-  <h1>Edit Booking</h1>
-
+  
+  <h2>Edit Booking</h2>
+  
   <form action="/attendences/<%= @attendences.id %>" method="post">
-
-    <p><%= @attendences.member().name %></p>
-
+    
+    <h3><%= @attendences.member().name %></h3>
+    
     <input hidden type="text" name="member_id" value="<%= @attendences.member_id %>">
-
-    <label for="class_select">Select a class</label>
-    <select id="class_select" name="gymclass_id" value="<%= @attendences.gymclass_id%>">
-      <% for gymclass in @gymclasses %>
-      <% if gymclass.id == @attendences.gymclass_id %>
-      <option value=<%= gymclass.id %>  selected > <%= gymclass.name %></option>
-      <% else %>
-      <option value=<%= gymclass.id %>> <%= gymclass.name %></option>
-      <% end %>
-      <% end %>
-    </select>
-
-    <input type="submit" value="Edit">
+    
+    <div class="class_select">
+      <label for="class_select">Select a class</label>
+      <div>
+        <select name="gymclass_id" value="<%= @attendences.gymclass_id%>">
+          <% for gymclass in @gymclasses %>
+          <% if gymclass.id == @attendences.gymclass_id %>
+          <option value=<%= gymclass.id %>  selected > <%= gymclass.name %></option>
+          <% else %>
+          <option value=<%= gymclass.id %>> <%= gymclass.name %></option>
+          <% end %>
+          <% end %>
+        </select>
+      </div>
+    </div>
+    
+    <input type="submit" value="Submit">
+    
+    <h4> <a class="back" href="/attendences">Back</a> </h4>
+    
   </form>
-
-  <p> <a href="/attendences">Back</a> </p>
-
+  
 </div>

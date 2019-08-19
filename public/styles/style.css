@@ -20,12 +20,24 @@ header {
   margin-right: auto;
 }
 
+#background {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  box-shadow: 0 8px 6px -6px gray;
+  height: 700px;
+}
+
 .topnav {
   background-color: #333;
   text-align: center;
   box-sizing: border-box;
   box-shadow: 0 8px 6px -6px gray;
   padding: 20px;
+  font-weight: 300;
 }
 
 .topnav a {
@@ -41,13 +53,6 @@ header {
   color: black;
 }
 
-/* .app-container {
-  background-image: url(../images/background.png) no-repeat center center fixed;
-  background-size: cover;
-  height: 100%;
-  overflow: hidden;
-} */
-
 .container {
   padding: 20px;
   margin-top: 30px;
@@ -60,25 +65,37 @@ header {
   width: 40%;
   box-shadow: 0 8px 6px -6px gray;
   text-align: center;
+  font-weight: 300;
 }
 
-.container h2, h3 {
+.container h2 {
   color: rgb(96, 217, 251);
   margin-top: 30px;
+  font-weight: 400;
 }
 
 .container h3 {
   color: whitesmoke;
   margin-top: 30px;
+  font-weight: 400;
 }
 
-.container a {
+.container p {
+  color: whitesmoke;
+  font-weight: 300;
+}
+
+.back {
+  margin-top: 30px;
+  margin-bottom: 10px;
   color: whitesmoke;
   text-decoration: none;
   padding: 5px;
+  font-weight: 300;
+  font-size: 20px;
 }
 
-.container a:hover {
+.back:hover {
   background-color: #333;
   color: rgb(96, 217, 251);
 }
@@ -97,25 +114,31 @@ input[type=text] {
 input[type=submit] {
   font-size: 15px;
   padding: 10px 20px;
-  margin: 15px;
+  margin: 10px;
   border-radius: 5px;
   border: 0 none;
-  background: lightgreen;
+  background: aquamarine;
   cursor: pointer;
+  font-weight: 300;
 }
 
 input[type="submit"]:hover {
 	background-color: #2ee59d;
 	box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-	color: black;
 	transform: translateY(-7px);
 }
 
 select {
   font-size: 15px;
-  padding: 10px 20px;
   margin: 15px;
   border-radius: 5px;
+  width: 40%;
+  height: 30px;
+}
+
+select:focus {
+  min-width: 40%;
+  width: auto;
 }
 
 #delete-button {
@@ -124,19 +147,20 @@ select {
   margin: 15px;
   border-radius: 5px;
   border: 0 none;
-  background: crimson;
+  background: indianred;
   cursor: pointer;
 }
 
 #delete-button:hover {
-  background-color: indianred;
-	box-shadow: 0px 15px 20px red;
-	color: black;
+  background-color: crimson;
+	box-shadow: 0px 15px 20px tomato;
 	transform: translateY(-7px);
 }
 
 #details {
   color: dimgray;
+  text-decoration: none;
+  font-weight: 400;
 }
 
 #details:hover {
@@ -144,139 +168,14 @@ select {
   color: darkgrey;
 }
 
-/* .index {
-  padding: 20px;
-  margin-bottom: 100px;
-  background: #333;
-  color: whitesmoke;
+#create-button {
+  padding: 10px 20px;
   border-radius: 5px;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-  width: 500px;
-} */
-
-/*
-input[type=submit] {
-  background-color: #00999d;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
+  border: 0 none;
+  background:rgb(96, 217, 251);
   cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-} */
-
-/* #container {
-  border-radius: 5px;
-  background-color: #212121;
-  padding: 20px;
-  padding-top: 20px;
-  width: 500px;
-  height: 475px;
-  color: white;
-  margin: 0 auto;
-  margin-top: 30px;
-} */
-/*
-p a {
-  float: left;
-  color: #f2f2f2;
-  padding: 6px 18px;
   text-decoration: none;
+  font-weight: 400;
+  color: #333;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-
-.create {
-  color: black;
-  text-align: center;
-}
-
-.create a {
-  color: black;
-  text-align: center;
-  width: -webkit-fill-available;
-  font-size: larger;
-}
-
-.index {
-  border-radius: 5px;
-  background-color: #212121;
-  padding: 20px;
-  width: 400px;
-  height: 475px;
-  color: white;
-  margin: 0 auto;
-  margin-top: 30px;
-}
-
-.index h1 {
-  margin: 0 auto;
-  background-color: #212121;
-  padding: 20px;
-  text-align: center;
-  color: #00999d;
-}
-
-.index a {
-  color: #00999d;
-  text-align: center;
-  width: 400px;
-  font-size: larger;
-  padding: 0px;
-  margin: 0 auto;
-}
-
-.index p {
-  color: white;
-  text-align: center;
-  width: 400px;
-  padding: 10px 0px;
-  margin: 0 auto;
-}
-
-h2 {
-  margin: 0 auto;
-  color: white;
-  text-align: center;
-  width: 400px;
-}
-
-.index_attendences {
-  border-radius: 5px;
-  background-color: #212121;
-  padding: 20px;
-  width: 400px;
-  height: 630px;
-  color: white;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-
-.index_attendences h1 {
-  margin: 0 auto;
-  background-color: #212121;
-  padding: 20px;
-  text-align: center;
-  color: #00999d;
-}
-
-.index_attendences a {
-  color: #00999d;
-  text-align: center;
-  width: 400px;
-  font-size: larger;
-  padding: 0px;
-  margin: 0 auto;
-}
-
-.index_attendences p {
-  color: white;
-  text-align: center;
-  width: 400px;
-  padding: 10px 0px;
-  margin: 0 auto;
-} */

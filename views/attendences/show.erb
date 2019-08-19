@@ -1,15 +1,15 @@
 <div class="container">
-
-  <h1>Booking details</h1>
-
+  
+  <h2>Booking details</h2>
+  
   <p>Member: <%= @attendence.member().name %> </p>
   <p>Class: <%= @attendence.gymclass().name %> </p>
   <p>Duration: <%= @attendence.gymclass().duration %></p>
   <p>Instructor: <%= @attendence.gymclass().instructor %></p>
-
+  
   <form action="/attendences/<%= @attendence.id %>/edit" method="GET"><input type="submit" value="Edit"></form>
-  <form action="/attendences/<%= @attendence.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
-
-  <p> <a href="/attendences">Back</a> </p>
-
+  <form action="/attendences/<%= @attendence.id %>/delete" method="POST"><input type="submit" value="Delete" id="delete-button"></form>
+  
+  <h4> <a class="back" href="/attendences">Back</a> </h4>
+  
 </div>
