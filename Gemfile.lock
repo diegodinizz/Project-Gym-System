@@ -14,7 +14,8 @@ GEM
     tilt (2.0.9)
 
 PLATFORMS
-  ruby 
+  ruby
+  unknown
 
 DEPENDENCIES
   pg (~> 0.18)
