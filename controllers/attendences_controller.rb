@@ -1,7 +1,7 @@
-require_relative( '../models/attendence.rb' )
-require_relative( '../models/gymclass.rb' )
-require_relative( '../models/member.rb' )
-also_reload( '../models/*' )
+require 'sinatra' 
+require_relative '../models/attendence.rb' 
+require_relative '../models/gymclass.rb' 
+require_relative '../models/member.rb' 
 
 # index
 get '/attendences' do

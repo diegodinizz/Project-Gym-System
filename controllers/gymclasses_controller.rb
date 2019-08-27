@@ -1,5 +1,5 @@
-require_relative( '../models/gymclass.rb' )
-also_reload( '../models/*' )
+require 'sinatra' 
+require_relative '../models/gymclass.rb' 
 
 # index
 get '/classes' do
