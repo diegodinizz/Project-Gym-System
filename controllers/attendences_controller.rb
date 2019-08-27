@@ -1,5 +1,3 @@
-require( 'sinatra' )
-require( 'sinatra/contrib/all' )
 require_relative( '../models/attendence.rb' )
 require_relative( '../models/gymclass.rb' )
 require_relative( '../models/member.rb' )
