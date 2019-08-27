@@ -15,7 +15,6 @@ GEM
 
 PLATFORMS
   ruby
-  unknown
 
 DEPENDENCIES
   pg (~> 0.18)
