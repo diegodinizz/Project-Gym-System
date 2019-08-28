@@ -189,6 +189,10 @@ select:focus {
     width: 60%;
   }
 
+  .topnav a {
+    display: -webkit-inline-box;
+  }
+
   .container {
     width: 80%;
   }
