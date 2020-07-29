@@ -1,4 +1,4 @@
 # Gym System
-The app allows the gym staff to sign up a new user membership, edit membership, add classes, edit existing classes and book classes.
+The Gym application is a gym management system built using Ruby, Sinatra and PostgreSQL to store members and classes data. The app allows gym staff to sign up new members, edit memberships, add new classes and edit and book existing ones.
 
 https://the-gym.herokuapp.com
